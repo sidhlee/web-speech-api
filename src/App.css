@@ -1,5 +1,25 @@
+:root {
+  --clr-primary: #61dafb;
+  --clr-bg: #282c34;
+}
+
+body {
+  background: var(--clr-bg);
+  color: white;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,14 +34,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--clr-bg);
+  height: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 2rem;
 }
 
 .App-link {
@@ -35,4 +56,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.speech-synthesis,
+.speech-recognition {
+  flex: 1 1;
+  /* height: 20rem; */
+  min-width: 400px;
+  max-width: 800px;
+  margin: 2rem;
+  text-align: left;
+}
+
+input,
+select {
+  width: 100%;
+  display: block;
+  padding: 0.5em 1em;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+.form-control {
+  margin-bottom: 0.5em;
+}
+
+button {
+  font: inherit;
+  width: 100%;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+.speech-recognition .result {
+  background: white;
+  color: black;
+  padding: 1em;
+}
+
+fieldset {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.events {
+  height: 100%;
+  min-height: 2rem;
+  background: white;
+  overflow: scroll;
+  color: black;
+}
+
+ol {
+  margin: 0;
 }
